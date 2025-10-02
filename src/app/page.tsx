@@ -100,56 +100,23 @@ export default function LandingPage() {
           transition={{ delay: 0.6, type: "spring", stiffness: 260, damping: 24 }}
           className="space-y-12"
         >
-          <div className="space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-              Explore Features
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Discover what makes our platform special
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="space-y-4 text-left">
-              <h3 className="text-xl md:text-2xl font-semibold tracking-tight">
-                Features that stay out of your way
+          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            <div className="space-y-4 text-center">
+              <h3 className="text-2xl md:text-3xl font-semibold tracking-tight">
+                Queriee Engine
               </h3>
-              <p className="text-muted-foreground">Design flows in minutes, connect powerful services, and monitor runs with friendly logs. Minimal UI, maximum clarity.</p>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
-                  <span>Drag-and-drop steps with type-safe inputs</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
-                  <span>Google, Postgres, Notion connectors, and more</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
-                  <span>Retry failed runs and inspect logs in real-time</span>
-                </li>
-              </ul>
+              <p className="text-muted-foreground">
+                Our proprietary engine connects to any data source and runs cross-source SQL queries in real-time. No ETL pipelines, no data warehouses needed.
+              </p>
             </div>
 
-            <div className="space-y-4 text-left">
-              <h3 className="text-xl md:text-2xl font-semibold tracking-tight">
-                Operate with confidence
+            <div className="space-y-4 text-center">
+              <h3 className="text-2xl md:text-3xl font-semibold tracking-tight">
+                Effortless Usage
               </h3>
-              <p className="text-muted-foreground">Transparent run logs, observability, and graceful retries out of the box. Get notified and fix issues fast.</p>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
-                  <span>Live run timeline and step-level logs</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
-                  <span>One-click retry with idempotency</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
-                  <span>Type-safe inputs and outputs</span>
-                </li>
-              </ul>
+              <p className="text-muted-foreground">
+                Connect your tools in seconds, write SQL like you always have, and get instant results. It's that simple.
+              </p>
             </div>
           </div>
         </motion.div>
@@ -194,7 +161,7 @@ export default function LandingPage() {
 
     {/* Simple Footer */}
     <footer className="border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-center">
+      <div className="flex h-16 items-center justify-center">
         <p className="text-sm text-muted-foreground">
           © 2024 Queriee. All rights reserved.
         </p>
