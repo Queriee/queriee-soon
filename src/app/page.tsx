@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { PixelBlast } from "@/components/PixelBlast";
 import { LogoLoop } from "@/components/LogoLoop";
@@ -8,28 +7,7 @@ import { SiGooglesheets, SiGooglecalendar, SiPostgresql, SiNotion, SiGoogletasks
 import { ShinyText } from "@/components/ShinyText";
 import { SimpleHeader } from "@/components/SimpleHeader";
 
-const logos = [
-{ name: "Stripe", slug: "stripe", color: "6772e5" },
-{ name: "Slack", slug: "slack", color: "611f69" },
-{ name: "Linear", slug: "linear", color: "5E6AD2" },
-{ name: "Vercel", slug: "vercel", color: "000000" },
-{ name: "Notion", slug: "notion", color: "000000" },
-{ name: "Postgres", slug: "postgresql", color: "4169E1" }];
 
-
-const features = [
-{
-  title: "Build flows in minutes",
-  desc: "Drag simple steps together to automate your day. Minimal UI, maximum clarity."
-},
-{
-  title: "Powerful connectors",
-  desc: "Google, Postgres, Notion and more — authenticated and ready to go."
-},
-{
-  title: "Observe & retry",
-  desc: "See every run with friendly logs. Retry failures with one click."
-}];
 
 
 export default function LandingPage() {
@@ -83,7 +61,7 @@ export default function LandingPage() {
             pauseOnHover
             scaleOnHover
             fadeOut
-            fadeOutColor="var(--background)"
+            fadeOutColor="#0b0b0b"
             ariaLabel="Connector brands" />
 
         </div>

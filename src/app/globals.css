@@ -78,7 +78,7 @@
 }
 
 .animate-shine {
-  animation: shine 6s ease-in-out infinite;
+  animation: shine 5s linear infinite;
 }
 
 @keyframes logo-loop-left {
