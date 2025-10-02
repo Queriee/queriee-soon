@@ -33,7 +33,7 @@ export default function LandingPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, type: "spring", stiffness: 260, damping: 24 }}
               className="mt-4 sm:mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Something amazing is coming. Stay tuned for the future of data analytics.
+              Something amazing is coming.
             </motion.p>
           </div>
 
@@ -85,7 +85,7 @@ export default function LandingPage() {
                 Queriee Engine
               </h3>
               <p className="text-muted-foreground">
-                Our proprietary engine connects to any data source and runs cross-source SQL queries in real-time. No ETL pipelines, no data warehouses needed.
+                Our proprietary engine connects to any data source and runs cross-source SQL queries in real-time.
               </p>
             </div>
 
@@ -142,7 +142,7 @@ export default function LandingPage() {
     <footer className="border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="flex h-16 items-center justify-center">
         <p className="text-sm text-muted-foreground">
-          © 2024 Queriee. All rights reserved.
+          © 2025 Queriee. All rights reserved.
         </p>
       </div>
     </footer>
