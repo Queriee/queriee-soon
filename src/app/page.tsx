@@ -15,36 +15,36 @@ export default function LandingPage() {
   return (
     <>
       <SimpleHeader />
-      <main className="mx-auto max-w-6xl px-3 sm:px-4">
-      {/* Hero */}
-      <section className="relative overflow-hidden pt-12 sm:pt-16 md:pt-24">
-        <div className="mx-auto max-w-3xl text-center">
-          <motion.h1
-            initial={reduceMotion ? undefined : { opacity: 0, y: 8 }}
+
+      {/* Hero Section - Full Viewport Height */}
+      <main className="min-h-[calc(100vh-3.5rem)] flex flex-col">
+        <section className="flex-1 flex flex-col items-center justify-center px-3 sm:px-4 relative">
+          <div className="mx-auto max-w-3xl text-center">
+            <motion.h1
+              initial={reduceMotion ? undefined : { opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ type: "spring", stiffness: 260, damping: 24 }}
+              className="text-3xl sm:text-4xl md:text-6xl font-semibold tracking-tight">
+
+              <ShinyText text="Coming Soon" className="leading-tight" />
+            </motion.h1>
+            <motion.p
+              initial={reduceMotion ? undefined : { opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, type: "spring", stiffness: 260, damping: 24 }}
+              className="mt-4 sm:mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
+              Something amazing is coming. Stay tuned for the future of data analytics.
+            </motion.p>
+          </div>
+
+          {/* Connectors loop - Centered in viewport */}
+          <motion.div
+            initial={reduceMotion ? undefined : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ type: "spring", stiffness: 260, damping: 24 }}
-            className="text-3xl sm:text-4xl md:text-6xl font-semibold tracking-tight">
-
-            <ShinyText text="Coming Soon" className="leading-tight" />
-          </motion.h1>
-          <motion.p
-            initial={reduceMotion ? undefined : { opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1, type: "spring", stiffness: 260, damping: 24 }}
-            className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg text-muted-foreground">
-
-            Something amazing is coming. Stay tuned for the future of data analytics.
-          </motion.p>
-
-        </div>
-
-
-      </section>
-
-      {/* Connectors loop */}
-      <section className="mt-16 md:mt-24">
-        <div className="text-center text-muted-foreground !text-xl">Connects with your favorite tools</div>
-        <div className="mt-6 h-28 md:h-40 relative">
+            transition={{ delay: 0.3, type: "spring", stiffness: 260, damping: 24 }}
+            className="mt-16 md:mt-24 w-full max-w-6xl">
+            <div className="text-center text-muted-foreground !text-xl">Connects with your favorite tools</div>
+            <div className="mt-6 h-28 md:h-40 relative">
           <LogoLoop
             logos={[
             { node: <SiGooglesheets className="h-6 w-6 md:h-10 md:w-10" />, title: "Google Sheets", href: "https://www.google.com/sheets/about/" },
@@ -64,14 +64,15 @@ export default function LandingPage() {
             fadeOutColor="#0b0b0b"
             ariaLabel="Connector brands" />
 
-        </div>
-      </section>
+            </div>
+          </motion.div>
+        </section>
+      </main>
 
-      {/* Features heading */}
-      <h2 id="features" className="mt-16 md:mt-24 text-center text-2xl tracking-tight scroll-mt-24 !font-bold md:!text-[35px]">Explore Features</h2>
-
-      {/* Features section */}
-      <section className="mt-16 text-center">
+      {/* Scrollable Content Below */}
+      <div className="mx-auto max-w-6xl px-3 sm:px-4">
+        {/* Features section */}
+        <section className="py-16 text-center">
         <motion.div
           initial={reduceMotion ? undefined : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -135,7 +136,7 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-    </main>
+      </div>
 
     {/* Simple Footer */}
     <footer className="border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
