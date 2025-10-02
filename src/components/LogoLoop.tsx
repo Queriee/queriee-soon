@@ -52,16 +52,22 @@ export const LogoLoop: React.FC<LogoLoopProps> = ({
       className="relative w-full overflow-hidden"
       style={{ height: logoHeight + 16 }}
     >
-      {/* Fade masks */}
+      {/* Fade masks with shadows */}
       {fadeOut && (
         <>
           <div
-            className="pointer-events-none absolute inset-y-0 left-0 w-24 z-10"
-            style={{ background: `linear-gradient(90deg, ${fadeOutColor}, transparent)` }}
+            className="pointer-events-none absolute inset-y-0 left-0 w-32 z-10"
+            style={{
+              background: `linear-gradient(90deg, ${fadeOutColor}, rgba(0,0,0,0.3) 60%, transparent)`,
+              boxShadow: 'inset -10px 0 20px rgba(0,0,0,0.2)'
+            }}
           />
           <div
-            className="pointer-events-none absolute inset-y-0 right-0 w-24 z-10"
-            style={{ background: `linear-gradient(270deg, ${fadeOutColor}, transparent)` }}
+            className="pointer-events-none absolute inset-y-0 right-0 w-32 z-10"
+            style={{
+              background: `linear-gradient(270deg, ${fadeOutColor}, rgba(0,0,0,0.3) 60%, transparent)`,
+              boxShadow: 'inset 10px 0 20px rgba(0,0,0,0.2)'
+            }}
           />
         </>
       )}

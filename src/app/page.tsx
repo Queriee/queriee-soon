@@ -6,6 +6,7 @@ import { PixelBlast } from "@/components/PixelBlast";
 import { LogoLoop } from "@/components/LogoLoop";
 import { SiGooglesheets, SiGooglecalendar, SiPostgresql, SiNotion, SiGoogletasks, SiGoogleforms } from "react-icons/si";
 import { ShinyText } from "@/components/ShinyText";
+import { SimpleHeader } from "@/components/SimpleHeader";
 
 const logos = [
 { name: "Stripe", slug: "stripe", color: "6772e5" },
@@ -34,7 +35,9 @@ const features = [
 export default function LandingPage() {
   const reduceMotion = useReducedMotion();
   return (
-    <main className="mx-auto max-w-6xl px-3 sm:px-4">
+    <>
+      <SimpleHeader />
+      <main className="mx-auto max-w-6xl px-3 sm:px-4">
       {/* Hero */}
       <section className="relative overflow-hidden pt-12 sm:pt-16 md:pt-24">
         <div className="mx-auto max-w-3xl text-center">
@@ -90,32 +93,66 @@ export default function LandingPage() {
       <h2 id="features" className="mt-16 md:mt-24 text-center text-2xl tracking-tight scroll-mt-24 !font-bold md:!text-[35px]">Explore Features</h2>
 
       {/* Features section */}
-      <section className="mt-6 text-center">
-        <div className="space-y-6">
-          <div className="space-y-3">
-            <h3 className="text-2xl md:text-3xl font-semibold tracking-tight">
-              Features that stay out of your way
-            </h3>
-            <p className="text-muted-foreground">Design flows in minutes, connect powerful services, and monitor runs with friendly logs. Minimal UI, maximum clarity.</p>
-            <ul className="mt-2 space-y-2 text-sm text-muted-foreground list-disc pl-5 text-left max-w-md mx-auto">
-              <li>Drag-and-drop steps with type-safe inputs</li>
-              <li>Google, Postgres, Notion connectors, and more</li>
-              <li>Retry failed runs and inspect logs in real-time</li>
-            </ul>
+      <section className="mt-16 text-center">
+        <motion.div
+          initial={reduceMotion ? undefined : { opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, type: "spring", stiffness: 260, damping: 24 }}
+          className="space-y-12"
+        >
+          <div className="space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+              Explore Features
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Discover what makes our platform special
+            </p>
           </div>
 
-          <div className="space-y-3">
-            <h3 className="text-2xl md:text-3xl font-semibold tracking-tight">
-              Operate with confidence
-            </h3>
-            <p className="text-muted-foreground">Transparent run logs, observability, and graceful retries out of the box. Get notified and fix issues fast.</p>
-            <ul className="mt-2 space-y-2 text-sm text-muted-foreground list-disc pl-5 text-left max-w-md mx-auto">
-              <li>Live run timeline and step-level logs</li>
-              <li>One-click retry with idempotency</li>
-              <li>Type-safe inputs and outputs</li>
-            </ul>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="space-y-4 text-left">
+              <h3 className="text-xl md:text-2xl font-semibold tracking-tight">
+                Features that stay out of your way
+              </h3>
+              <p className="text-muted-foreground">Design flows in minutes, connect powerful services, and monitor runs with friendly logs. Minimal UI, maximum clarity.</p>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Drag-and-drop steps with type-safe inputs</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Google, Postgres, Notion connectors, and more</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Retry failed runs and inspect logs in real-time</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="space-y-4 text-left">
+              <h3 className="text-xl md:text-2xl font-semibold tracking-tight">
+                Operate with confidence
+              </h3>
+              <p className="text-muted-foreground">Transparent run logs, observability, and graceful retries out of the box. Get notified and fix issues fast.</p>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Live run timeline and step-level logs</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>One-click retry with idempotency</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Type-safe inputs and outputs</span>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* CTA */}
@@ -153,6 +190,16 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-    </main>);
+    </main>
 
+    {/* Simple Footer */}
+    <footer className="border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-16 items-center justify-center">
+        <p className="text-sm text-muted-foreground">
+          © 2024 Queriee. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </>
+  );
 }
