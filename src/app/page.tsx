@@ -47,12 +47,12 @@ export default function LandingPage() {
         <div className="mt-6 h-28 md:h-40 relative">
           <LogoLoop
             logos={[
-            { node: <SiGooglesheets className="h-10 w-10" />, title: "Google Sheets", href: "https://www.google.com/sheets/about/" },
-            { node: <SiGooglecalendar className="h-10 w-10" />, title: "Google Calendar", href: "https://calendar.google.com" },
-            { node: <SiGoogletasks className="h-10 w-10" />, title: "Google Tasks", href: "https://tasks.google.com" },
-            { node: <SiGoogleforms className="h-10 w-10" />, title: "Google Forms", href: "https://docs.google.com/forms" },
-            { node: <SiNotion className="h-10 w-10" />, title: "Notion", href: "https://www.notion.so" },
-            { node: <SiPostgresql className="h-10 w-10" />, title: "Postgres", href: "https://www.postgresql.org" }]
+            { node: <SiGooglesheets className="h-6 w-6 md:h-10 md:w-10" />, title: "Google Sheets", href: "https://www.google.com/sheets/about/" },
+            { node: <SiGooglecalendar className="h-6 w-6 md:h-10 md:w-10" />, title: "Google Calendar", href: "https://calendar.google.com" },
+            { node: <SiGoogletasks className="h-6 w-6 md:h-10 md:w-10" />, title: "Google Tasks", href: "https://tasks.google.com" },
+            { node: <SiGoogleforms className="h-6 w-6 md:h-10 md:w-10" />, title: "Google Forms", href: "https://docs.google.com/forms" },
+            { node: <SiNotion className="h-6 w-6 md:h-10 md:w-10" />, title: "Notion", href: "https://www.notion.so" },
+            { node: <SiPostgresql className="h-6 w-6 md:h-10 md:w-10" />, title: "Postgres", href: "https://www.postgresql.org" }]
             }
             speed={80}
             direction="left"
